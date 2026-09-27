@@ -1,0 +1,207 @@
+{
+  "purpose": "small-sample alternative-source verification; not an investment conclusion",
+  "started_at_beijing": "2026-09-27T13:23:00.853897+08:00",
+  "finished_at_beijing": "2026-09-27T13:23:05.769109+08:00",
+  "environment": {
+    "python": "3.14.4",
+    "akshare": "1.18.97"
+  },
+  "per_call_timeout_seconds": 15,
+  "results": [
+    {
+      "id": "ths_industry_list",
+      "source": "同花顺公开网页",
+      "fn": "stock_board_industry_name_ths",
+      "kwargs": {},
+      "status": "failed",
+      "elapsed_seconds": 0.111,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /thshy/detail/code/881272/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "ths_industry_members",
+      "source": "同花顺公开网页",
+      "fn": "stock_board_industry_info_ths",
+      "kwargs": {
+        "symbol": "半导体"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.112,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /thshy/detail/code/881272/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "ths_industry_history",
+      "source": "同花顺公开网页",
+      "fn": "stock_board_industry_index_ths",
+      "kwargs": {
+        "symbol": "半导体",
+        "start_date": "20260823",
+        "end_date": "20260927"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.102,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /thshy/detail/code/881272/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "ths_concept_list",
+      "source": "同花顺公开网页",
+      "fn": "stock_board_concept_name_ths",
+      "kwargs": {},
+      "status": "failed",
+      "elapsed_seconds": 0.107,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "ths_concept_members",
+      "source": "同花顺公开网页",
+      "fn": "stock_board_concept_info_ths",
+      "kwargs": {
+        "symbol": "人工智能"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.101,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "ths_concept_history",
+      "source": "同花顺公开网页",
+      "fn": "stock_board_concept_index_ths",
+      "kwargs": {
+        "symbol": "人工智能",
+        "start_date": "20260823",
+        "end_date": "20260927"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.121,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "tencent_stock_daily",
+      "source": "腾讯证券",
+      "fn": "stock_zh_a_hist_tx",
+      "kwargs": {
+        "symbol": "sz000001",
+        "start_date": "20260823",
+        "end_date": "20260927",
+        "adjust": "",
+        "timeout": 10
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.055,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='web.ifzq.gtimg.cn', port=443): Max retries exceeded with url: /other/klineweb/klineWeb/weekTrends?code=sz000001&type=qfq&_var=trend_qfq&r=0.3506048543943414 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "sina_trade_calendar",
+      "source": "新浪财经",
+      "fn": "tool_trade_date_hist_sina",
+      "kwargs": {},
+      "status": "failed",
+      "elapsed_seconds": 0.052,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='finance.sina.com.cn', port=443): Max retries exceeded with url: /realstock/company/klc_td_sh.txt (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "sina_index_daily",
+      "source": "新浪财经",
+      "fn": "stock_zh_index_daily",
+      "kwargs": {
+        "symbol": "sh000001"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.06,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='finance.sina.com.cn', port=443): Max retries exceeded with url: /realstock/company/sh000001/hisdata/klc_kl.js?d=2020_2_4 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "cninfo_notice",
+      "source": "巨潮资讯",
+      "fn": "stock_zh_a_disclosure_report_cninfo",
+      "kwargs": {
+        "symbol": "000001",
+        "market": "沪深京",
+        "start_date": "20260823",
+        "end_date": "20260927"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.062,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "eastmoney_individual_notice",
+      "source": "东方财富",
+      "fn": "stock_individual_notice_report",
+      "kwargs": {
+        "security": "000001",
+        "symbol": "全部",
+        "begin_date": "20260823",
+        "end_date": "20260927"
+      },
+      "status": "success",
+      "elapsed_seconds": 1.562,
+      "rows": 7,
+      "columns": [
+        "代码",
+        "名称",
+        "公告标题",
+        "公告类型",
+        "公告日期",
+        "网址"
+      ],
+      "missing_by_column": {
+        "代码": 0,
+        "名称": 0,
+        "公告标题": 0,
+        "公告类型": 0,
+        "公告日期": 0,
+        "网址": 0
+      },
+      "date_column": "公告日期",
+      "date_min": "2026-08-24",
+      "date_max": "2026-09-22",
+      "sample_identity": [
+        {
+          "代码": "000001",
+          "名称": "平安银行",
+          "公告标题": "平安银行:关于2026年金融债券(第一期)发行完毕的公告"
+        },
+        {
+          "代码": "000001",
+          "名称": "平安银行",
+          "公告标题": "平安银行:投资者关系管理信息"
+        }
+      ]
+    },
+    {
+      "id": "sina_us_daily",
+      "source": "新浪财经",
+      "fn": "stock_us_daily",
+      "kwargs": {
+        "symbol": ".DJI",
+        "adjust": ""
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.062,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='finance.sina.com.cn', port=443): Max retries exceeded with url: /staticdata/us/.DJI (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    },
+    {
+      "id": "cctv_events",
+      "source": "央视网",
+      "fn": "news_cctv",
+      "kwargs": {
+        "date": "20260926"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.056,
+      "error_type": "ProxyError",
+      "error": "HTTPSConnectionPool(host='tv.cctv.com', port=443): Max retries exceeded with url: /lm/xwlb/day/20260926.shtml (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+    }
+  ]
+}

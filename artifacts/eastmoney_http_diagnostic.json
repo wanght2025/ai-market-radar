@@ -1,0 +1,60 @@
+{
+  "purpose": "single-request diagnostics; no bypass or alternate host",
+  "started_at_beijing": "2026-09-27T13:22:51.931049+08:00",
+  "finished_at_beijing": "2026-09-27T13:22:55.989409+08:00",
+  "environment": {
+    "python": "3.14.4",
+    "akshare": "1.18.97",
+    "requests": "2.34.2",
+    "proxy_environment_present": {
+      "HTTP_PROXY": true,
+      "HTTPS_PROXY": true,
+      "NO_PROXY": true
+    }
+  },
+  "timeout_seconds": 12.0,
+  "probes": [
+    {
+      "id": "industry_list_exact_akshare_target",
+      "host": "17.push2.eastmoney.com",
+      "requested_url": "https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=REDACTED&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222",
+      "http_status": 503,
+      "elapsed_seconds": 1.355,
+      "public_response_headers": {
+        "content-length": "95",
+        "content-type": "text/plain",
+        "date": "Sun, 27 Sep 2026 05:22:53 GMT",
+        "server": "envoy"
+      },
+      "body_prefix_200": "upstream connect error or disconnect/reset before headers. reset reason: connection termination"
+    },
+    {
+      "id": "sector_fund_mapping_exact_akshare_target",
+      "host": "push2.eastmoney.com",
+      "requested_url": "https://push2.eastmoney.com/api/qt/clist/get?fid=f62&po=1&pz=100&pn=1&np=1&fltt=2&invt=2&ut=REDACTED&fs=m%3A90+t%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf62%2Cf184%2Cf66%2Cf69%2Cf72%2Cf75%2Cf78%2Cf81%2Cf84%2Cf87%2Cf204%2Cf205%2Cf124%2Cf1%2Cf13",
+      "http_status": 502,
+      "elapsed_seconds": 1.221,
+      "public_response_headers": {
+        "server": "envoy",
+        "date": "Sun, 27 Sep 2026 05:22:54 GMT",
+        "content-type": "text/html",
+        "content-length": "157"
+      },
+      "body_prefix_200": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></center>\r\n<hr><center>nginx/1.26.2</center>\r\n</body>\r\n</html>\r\n"
+    },
+    {
+      "id": "stock_daily_known_good_target",
+      "host": "push2his.eastmoney.com",
+      "requested_url": "https://push2his.eastmoney.com/api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61%2Cf116&ut=REDACTED&klt=101&fqt=0&secid=0.000001&beg=20260901&end=20260927",
+      "http_status": 503,
+      "elapsed_seconds": 1.48,
+      "public_response_headers": {
+        "content-length": "95",
+        "content-type": "text/plain",
+        "date": "Sun, 27 Sep 2026 05:22:55 GMT",
+        "server": "envoy"
+      },
+      "body_prefix_200": "upstream connect error or disconnect/reset before headers. reset reason: connection termination"
+    }
+  ]
+}
