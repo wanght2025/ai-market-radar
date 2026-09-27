@@ -1,0 +1,88 @@
+{
+  "purpose": "free API small-sample verification; not an investment conclusion",
+  "started_at_beijing": "2026-09-27T13:04:39.716866+08:00",
+  "finished_at_beijing": "2026-09-27T13:04:45.224924+08:00",
+  "environment": {
+    "python": "3.14.4",
+    "akshare": "1.18.97",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "per_call_timeout_seconds": 12,
+  "sample_rows_saved_per_call": 3,
+  "results": [
+    {
+      "id": "risk_sample_000004_info",
+      "source": "东方财富",
+      "fn": "stock_individual_info_em",
+      "kwargs": {
+        "symbol": "000004",
+        "timeout": 10
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.659,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "stock_000001_fund",
+      "source": "东方财富",
+      "fn": "stock_individual_fund_flow",
+      "kwargs": {
+        "stock": "000001",
+        "market": "sz"
+      },
+      "status": "failed",
+      "elapsed_seconds": 1.043,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "index_sh000001",
+      "source": "东方财富",
+      "fn": "stock_zh_index_daily_em",
+      "kwargs": {
+        "symbol": "sh000001",
+        "start_date": "20260530",
+        "end_date": "20260927"
+      },
+      "status": "success",
+      "elapsed_seconds": 1.011,
+      "rows": 83,
+      "columns": [
+        "date",
+        "open",
+        "close",
+        "high",
+        "low",
+        "volume",
+        "amount"
+      ],
+      "missing_by_column": {
+        "date": 0,
+        "open": 0,
+        "close": 0,
+        "high": 0,
+        "low": 0,
+        "volume": 0,
+        "amount": 0
+      },
+      "date_column": "date",
+      "date_min": "2026-06-01",
+      "date_max": "2026-09-24",
+      "sample": []
+    },
+    {
+      "id": "notice_all_on_end_date",
+      "source": "东方财富",
+      "fn": "stock_notice_report",
+      "kwargs": {
+        "symbol": "全部",
+        "date": "20260927"
+      },
+      "status": "failed",
+      "elapsed_seconds": 1.313,
+      "error_type": "KeyError",
+      "error": "'代码'"
+    }
+  ]
+}
