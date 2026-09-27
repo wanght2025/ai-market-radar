@@ -1,0 +1,437 @@
+{
+  "purpose": "free API small-sample verification; not an investment conclusion",
+  "started_at_beijing": "2026-09-27T13:02:09.620922+08:00",
+  "finished_at_beijing": "2026-09-27T13:04:18.070193+08:00",
+  "environment": {
+    "python": "3.14.4",
+    "akshare": "1.18.97",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39"
+  },
+  "per_call_timeout_seconds": 12,
+  "sample_rows_saved_per_call": 3,
+  "results": [
+    {
+      "id": "industry_list",
+      "source": "东方财富",
+      "fn": "stock_board_industry_name_em",
+      "kwargs": {},
+      "status": "failed",
+      "elapsed_seconds": 10.185,
+      "error_type": "HTTPError",
+      "error": "503 Server Error: Service Unavailable for url: https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222"
+    },
+    {
+      "id": "concept_list",
+      "source": "东方财富",
+      "fn": "stock_board_concept_name_em",
+      "kwargs": {},
+      "status": "timeout",
+      "elapsed_seconds": 12.027,
+      "error": "exceeded 12s process timeout"
+    },
+    {
+      "id": "industry_bank_members",
+      "source": "东方财富",
+      "fn": "stock_board_industry_cons_em",
+      "kwargs": {
+        "symbol": "银行"
+      },
+      "status": "failed",
+      "elapsed_seconds": 10.398,
+      "error_type": "HTTPError",
+      "error": "503 Server Error: Service Unavailable for url: https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222"
+    },
+    {
+      "id": "industry_auto_members",
+      "source": "东方财富",
+      "fn": "stock_board_industry_cons_em",
+      "kwargs": {
+        "symbol": "汽车整车"
+      },
+      "status": "failed",
+      "elapsed_seconds": 9.343,
+      "error_type": "HTTPError",
+      "error": "503 Server Error: Service Unavailable for url: https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222"
+    },
+    {
+      "id": "concept_ai_members",
+      "source": "东方财富",
+      "fn": "stock_board_concept_cons_em",
+      "kwargs": {
+        "symbol": "人工智能"
+      },
+      "status": "timeout",
+      "elapsed_seconds": 12.024,
+      "error": "exceeded 12s process timeout"
+    },
+    {
+      "id": "concept_robot_members",
+      "source": "东方财富",
+      "fn": "stock_board_concept_cons_em",
+      "kwargs": {
+        "symbol": "机器人概念"
+      },
+      "status": "timeout",
+      "elapsed_seconds": 12.024,
+      "error": "exceeded 12s process timeout"
+    },
+    {
+      "id": "industry_bank_history",
+      "source": "东方财富",
+      "fn": "stock_board_industry_hist_em",
+      "kwargs": {
+        "symbol": "银行",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "period": "日k",
+        "adjust": ""
+      },
+      "status": "failed",
+      "elapsed_seconds": 7.402,
+      "error_type": "HTTPError",
+      "error": "503 Server Error: Service Unavailable for url: https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222"
+    },
+    {
+      "id": "industry_auto_history",
+      "source": "东方财富",
+      "fn": "stock_board_industry_hist_em",
+      "kwargs": {
+        "symbol": "汽车整车",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "period": "日k",
+        "adjust": ""
+      },
+      "status": "failed",
+      "elapsed_seconds": 8.428,
+      "error_type": "HTTPError",
+      "error": "503 Server Error: Service Unavailable for url: https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222"
+    },
+    {
+      "id": "concept_ai_history",
+      "source": "东方财富",
+      "fn": "stock_board_concept_hist_em",
+      "kwargs": {
+        "symbol": "人工智能",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "period": "daily",
+        "adjust": ""
+      },
+      "status": "timeout",
+      "elapsed_seconds": 12.029,
+      "error": "exceeded 12s process timeout"
+    },
+    {
+      "id": "concept_robot_history",
+      "source": "东方财富",
+      "fn": "stock_board_concept_hist_em",
+      "kwargs": {
+        "symbol": "机器人概念",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "period": "daily",
+        "adjust": ""
+      },
+      "status": "timeout",
+      "elapsed_seconds": 12.025,
+      "error": "exceeded 12s process timeout"
+    },
+    {
+      "id": "stock_000001_history",
+      "source": "东方财富",
+      "fn": "stock_zh_a_hist",
+      "kwargs": {
+        "symbol": "000001",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "adjust": "",
+        "timeout": 10
+      },
+      "status": "success",
+      "elapsed_seconds": 1.503,
+      "rows": 83,
+      "columns": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "missing_by_column": {
+        "日期": 0,
+        "股票代码": 0,
+        "开盘": 0,
+        "收盘": 0,
+        "最高": 0,
+        "最低": 0,
+        "成交量": 0,
+        "成交额": 0,
+        "振幅": 0,
+        "涨跌幅": 0,
+        "涨跌额": 0,
+        "换手率": 0
+      },
+      "date_column": "日期",
+      "date_min": "2026-06-01",
+      "date_max": "2026-09-24",
+      "sample": [
+        {
+          "日期": "2026-06-01",
+          "股票代码": "000001"
+        },
+        {
+          "日期": "2026-06-02",
+          "股票代码": "000001"
+        },
+        {
+          "日期": "2026-06-03",
+          "股票代码": "000001"
+        }
+      ]
+    },
+    {
+      "id": "stock_600000_history",
+      "source": "东方财富",
+      "fn": "stock_zh_a_hist",
+      "kwargs": {
+        "symbol": "600000",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "adjust": "",
+        "timeout": 10
+      },
+      "status": "success",
+      "elapsed_seconds": 1.563,
+      "rows": 83,
+      "columns": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "missing_by_column": {
+        "日期": 0,
+        "股票代码": 0,
+        "开盘": 0,
+        "收盘": 0,
+        "最高": 0,
+        "最低": 0,
+        "成交量": 0,
+        "成交额": 0,
+        "振幅": 0,
+        "涨跌幅": 0,
+        "涨跌额": 0,
+        "换手率": 0
+      },
+      "date_column": "日期",
+      "date_min": "2026-06-01",
+      "date_max": "2026-09-24",
+      "sample": [
+        {
+          "日期": "2026-06-01",
+          "股票代码": "600000"
+        },
+        {
+          "日期": "2026-06-02",
+          "股票代码": "600000"
+        },
+        {
+          "日期": "2026-06-03",
+          "股票代码": "600000"
+        }
+      ]
+    },
+    {
+      "id": "risk_sample_000004_info",
+      "source": "东方财富",
+      "fn": "stock_individual_info_em",
+      "kwargs": {
+        "symbol": "000004",
+        "timeout": 10
+      },
+      "status": "failed",
+      "elapsed_seconds": 1.497,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "industry_fund_rank_today",
+      "source": "东方财富",
+      "fn": "stock_sector_fund_flow_rank",
+      "kwargs": {
+        "indicator": "今日",
+        "sector_type": "行业资金流"
+      },
+      "status": "failed",
+      "elapsed_seconds": 1.403,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "industry_bank_fund_history",
+      "source": "东方财富",
+      "fn": "stock_sector_fund_flow_hist",
+      "kwargs": {
+        "symbol": "银行"
+      },
+      "status": "failed",
+      "elapsed_seconds": 6.131,
+      "error_type": "HTTPError",
+      "error": "502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/clist/get?fid=f62&po=1&pz=100&pn=1&np=1&fltt=2&invt=2&ut=8dec03ba335b81bf4ebdf7b29ec27d15&fs=m%3A90+t%3A2&fields=f12%2Cf14%2Cf2%2Cf3%2Cf62%2Cf184%2Cf66%2Cf69%2Cf72%2Cf75%2Cf78%2Cf81%2Cf84%2Cf87%2Cf204%2Cf205%2Cf124%2Cf1%2Cf13"
+    },
+    {
+      "id": "stock_000001_fund",
+      "source": "东方财富",
+      "fn": "stock_individual_fund_flow",
+      "kwargs": {
+        "stock": "000001",
+        "market": "sz"
+      },
+      "status": "failed",
+      "elapsed_seconds": 1.484,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "index_sh000001",
+      "source": "东方财富",
+      "fn": "stock_zh_index_daily_em",
+      "kwargs": {
+        "symbol": "sh000001",
+        "start_date": "20260530",
+        "end_date": "20260927"
+      },
+      "status": "failed",
+      "elapsed_seconds": 1.307,
+      "error_type": "JSONDecodeError",
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "notice_all_on_end_date",
+      "source": "东方财富",
+      "fn": "stock_notice_report",
+      "kwargs": {
+        "symbol": "全部",
+        "date": "20260927"
+      },
+      "status": "failed",
+      "elapsed_seconds": 0.866,
+      "error_type": "KeyError",
+      "error": "'代码'"
+    },
+    {
+      "id": "news_000001",
+      "source": "东方财富",
+      "fn": "stock_news_em",
+      "kwargs": {
+        "symbol": "000001"
+      },
+      "status": "success",
+      "elapsed_seconds": 1.498,
+      "rows": 10,
+      "columns": [
+        "关键词",
+        "新闻标题",
+        "新闻内容",
+        "发布时间",
+        "文章来源",
+        "新闻链接"
+      ],
+      "missing_by_column": {
+        "关键词": 0,
+        "新闻标题": 0,
+        "新闻内容": 0,
+        "发布时间": 0,
+        "文章来源": 0,
+        "新闻链接": 0
+      },
+      "date_column": "发布时间",
+      "date_min": "2026-08-15 09:44:11",
+      "date_max": "2026-09-24 17:04:00",
+      "sample": [
+        {
+          "新闻标题": "平安银行000001.SZ)2026年中报净利润为256.96亿元、较去年同期上涨3.32%",
+          "发布时间": "2026-08-17 10:47:00"
+        },
+        {
+          "新闻标题": "平安银行000001.SZ)：2026年中报净利润为256.96亿元",
+          "发布时间": "2026-08-15 10:09:51"
+        },
+        {
+          "新闻标题": "红利低波（H30269.CSI）指数多只成分股9月23日进行股权登记",
+          "发布时间": "2026-09-23 10:46:54"
+        }
+      ]
+    },
+    {
+      "id": "overseas_dow_jones",
+      "source": "东方财富",
+      "fn": "stock_us_hist",
+      "kwargs": {
+        "symbol": "100.DJIA",
+        "start_date": "20260530",
+        "end_date": "20260927",
+        "adjust": ""
+      },
+      "status": "success",
+      "elapsed_seconds": 3.077,
+      "rows": 82,
+      "columns": [
+        "日期",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "missing_by_column": {
+        "日期": 0,
+        "开盘": 0,
+        "收盘": 0,
+        "最高": 0,
+        "最低": 0,
+        "成交量": 0,
+        "成交额": 0,
+        "振幅": 0,
+        "涨跌幅": 0,
+        "涨跌额": 0,
+        "换手率": 0
+      },
+      "date_column": "日期",
+      "date_min": "2026-06-01",
+      "date_max": "2026-09-25",
+      "sample": [
+        {
+          "日期": "2026-06-01"
+        },
+        {
+          "日期": "2026-06-02"
+        },
+        {
+          "日期": "2026-06-03"
+        }
+      ]
+    }
+  ]
+}
