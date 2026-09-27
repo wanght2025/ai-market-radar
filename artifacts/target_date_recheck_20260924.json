@@ -1,0 +1,593 @@
+{
+  "purpose": "target-date low-volume recheck; not an investment conclusion",
+  "target_trade_date": "2026-09-24",
+  "started_at_beijing": "2026-09-28T03:43:29.264628+08:00",
+  "finished_at_beijing": "2026-09-28T03:44:21.068626+08:00",
+  "environment": {
+    "akshare": "1.18.97"
+  },
+  "constraints": {
+    "one_function_invocation_per_task": true,
+    "timeout_seconds": 10.0,
+    "no_retry": true,
+    "no_redirect": true
+  },
+  "key_lists_complete": false,
+  "coverage_inventory": {
+    "status": "not_verified",
+    "reason": "key lists failed; stock range, list counts, pagination totals, full members and histories were not scanned or estimated from invented data"
+  },
+  "results": [
+    {
+      "id": "stock_daily_000001",
+      "fn": "stock_zh_a_hist",
+      "kwargs": {
+        "symbol": "000001",
+        "start_date": "20260601",
+        "end_date": "20260924",
+        "adjust": "",
+        "timeout": 10
+      },
+      "host": "push2his.eastmoney.com",
+      "budget": 1,
+      "status": "success",
+      "rows": 83,
+      "columns": [
+        "日期",
+        "股票代码",
+        "开盘",
+        "收盘",
+        "最高",
+        "最低",
+        "成交量",
+        "成交额",
+        "振幅",
+        "涨跌幅",
+        "涨跌额",
+        "换手率"
+      ],
+      "missing": {
+        "日期": 0,
+        "股票代码": 0,
+        "开盘": 0,
+        "收盘": 0,
+        "最高": 0,
+        "最低": 0,
+        "成交量": 0,
+        "成交额": 0,
+        "振幅": 0,
+        "涨跌幅": 0,
+        "涨跌额": 0,
+        "换手率": 0
+      },
+      "date_column": "日期",
+      "date_min": "2026-06-01",
+      "date_max": "2026-09-24",
+      "contains_target_date": true,
+      "sample_identity": [
+        {
+          "股票代码": "000001"
+        },
+        {
+          "股票代码": "000001"
+        },
+        {
+          "股票代码": "000001"
+        }
+      ],
+      "elapsed_seconds": 1.96,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "push2his.eastmoney.com",
+          "path": "/api/qt/stock/kline/get",
+          "status": 200,
+          "elapsed_seconds": 1.879,
+          "headers": {
+            "server": "envoy",
+            "date": "Sun, 27 Sep 2026 19:43:32 GMT",
+            "content-type": "application/json; charset=UTF-8"
+          }
+        }
+      ],
+      "unit_evidence": "interface response has no unit metadata; amount/volume units remain unverified"
+    },
+    {
+      "id": "index_sh000001",
+      "fn": "stock_zh_index_daily_em",
+      "kwargs": {
+        "symbol": "sh000001",
+        "start_date": "20260601",
+        "end_date": "20260924"
+      },
+      "host": "push2his.eastmoney.com",
+      "budget": 1,
+      "status": "success",
+      "rows": 83,
+      "columns": [
+        "date",
+        "open",
+        "close",
+        "high",
+        "low",
+        "volume",
+        "amount"
+      ],
+      "missing": {
+        "date": 0,
+        "open": 0,
+        "close": 0,
+        "high": 0,
+        "low": 0,
+        "volume": 0,
+        "amount": 0
+      },
+      "date_column": "date",
+      "date_min": "2026-06-01",
+      "date_max": "2026-09-24",
+      "contains_target_date": true,
+      "sample_identity": [],
+      "elapsed_seconds": 1.533,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "push2his.eastmoney.com",
+          "path": "/api/qt/stock/kline/get",
+          "status": 200,
+          "elapsed_seconds": 1.466,
+          "headers": {
+            "server": "envoy",
+            "date": "Sun, 27 Sep 2026 19:43:33 GMT",
+            "content-type": "application/json; charset=UTF-8"
+          }
+        }
+      ],
+      "unit_evidence": "interface response has no unit metadata; amount/volume units remain unverified"
+    },
+    {
+      "id": "industry_list",
+      "fn": "stock_board_industry_name_em",
+      "kwargs": {},
+      "host": "17.push2.eastmoney.com",
+      "budget": 2,
+      "key_list": true,
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "503 Server Error: Service Unavailable for url: https://17.push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f3&fs=m%3A90+t%3A2+f%3A%2150&fields=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf12%2Cf13%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf23%2Cf24%2Cf25%2Cf26%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf136%2Cf115%2Cf152%2Cf124%2Cf107%2Cf104%2Cf105%2Cf140%2Cf141%2Cf207%2Cf208%2Cf209%2Cf222",
+      "elapsed_seconds": 10.091,
+      "http_calls": [],
+      "unit_evidence": "no table returned",
+      "http_count_observation": "instrumentation did not intercept AKShare Session requests in this run; AKShare request_with_retry permits up to 3 attempts, so exact actual count is not claimed"
+    },
+    {
+      "id": "concept_list",
+      "fn": "stock_board_concept_name_em",
+      "kwargs": {},
+      "host": "17.push2.eastmoney.com",
+      "budget": 4,
+      "key_list": true,
+      "status": "failed",
+      "error_type": "HTTPError",
+      "error": "502 Server Error: Bad Gateway for url: https://push2.eastmoney.com/api/qt/clist/get?pn=1&pz=100&po=1&np=1&ut=bd1d9ddb04089700cf9c27f6f7426281&fltt=2&invt=2&fid=f12&fs=m%3A90+t%3A3+f%3A%2150&fields=f2%2Cf3%2Cf4%2Cf8%2Cf12%2Cf14%2Cf15%2Cf16%2Cf17%2Cf18%2Cf20%2Cf21%2Cf24%2Cf25%2Cf22%2Cf33%2Cf11%2Cf62%2Cf128%2Cf124%2Cf107%2Cf104%2Cf105%2Cf136",
+      "elapsed_seconds": 26.624,
+      "http_calls": [],
+      "unit_evidence": "no table returned",
+      "http_count_observation": "instrumentation did not intercept AKShare Session requests in this run; AKShare request_with_retry permits up to 3 attempts, so exact actual count is not claimed"
+    },
+    {
+      "id": "industry_fund_home",
+      "fn": "stock_fund_flow_industry",
+      "kwargs": {
+        "symbol": "即时"
+      },
+      "host": "data.10jqka.com.cn",
+      "budget": 2,
+      "partial_ok": true,
+      "status": "partial_request_budget",
+      "error": "GET budget 2 exhausted",
+      "first_page": {
+        "rows": 20,
+        "columns": [
+          "序号",
+          "行业",
+          "行业指数",
+          "涨跌幅",
+          "流入资金(亿)",
+          "流出资金(亿)",
+          "净额(亿)",
+          "公司家数",
+          "领涨股",
+          "涨跌幅.1",
+          "当前价(元)"
+        ],
+        "missing": {
+          "序号": 0,
+          "行业": 0,
+          "行业指数": 0,
+          "涨跌幅": 0,
+          "流入资金(亿)": 0,
+          "流出资金(亿)": 0,
+          "净额(亿)": 0,
+          "公司家数": 0,
+          "领涨股": 0,
+          "涨跌幅.1": 0,
+          "当前价(元)": 0
+        },
+        "sample_identity": [
+          {
+            "行业": "风电设备"
+          },
+          {
+            "行业": "纺织制造"
+          },
+          {
+            "行业": "教育"
+          }
+        ]
+      },
+      "elapsed_seconds": 2.684,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "path": "/funds/hyzjl/field/tradezdf/order/desc/ajax/1/free/1/",
+          "status": 200,
+          "elapsed_seconds": 1.267,
+          "headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 19:44:11 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc2.10jqka.com.cn",
+            "via": "1.1 cachewc2.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cHs f ])",
+            "content-length": "4467"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "path": "/funds/hyzjl/field/tradezdf/order/desc/page/1/ajax/1/free/1/",
+          "status": 200,
+          "elapsed_seconds": 1.147,
+          "headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 19:44:13 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc5.10jqka.com.cn",
+            "via": "1.1 cachewc5.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cSsSfU])"
+          }
+        }
+      ],
+      "unit_evidence": "raw column labels: flow in/out/net = 亿; current price = 元"
+    },
+    {
+      "id": "concept_fund_home",
+      "fn": "stock_fund_flow_concept",
+      "kwargs": {
+        "symbol": "即时"
+      },
+      "host": "data.10jqka.com.cn",
+      "budget": 2,
+      "partial_ok": true,
+      "status": "partial_request_budget",
+      "error": "GET budget 2 exhausted",
+      "first_page": {
+        "rows": 20,
+        "columns": [
+          "序号",
+          "行业",
+          "行业指数",
+          "涨跌幅",
+          "流入资金(亿)",
+          "流出资金(亿)",
+          "净额(亿)",
+          "公司家数",
+          "领涨股",
+          "涨跌幅.1",
+          "当前价(元)"
+        ],
+        "missing": {
+          "序号": 0,
+          "行业": 0,
+          "行业指数": 0,
+          "涨跌幅": 0,
+          "流入资金(亿)": 0,
+          "流出资金(亿)": 0,
+          "净额(亿)": 0,
+          "公司家数": 0,
+          "领涨股": 0,
+          "涨跌幅.1": 0,
+          "当前价(元)": 0
+        },
+        "sample_identity": [
+          {
+            "行业": "中船系"
+          },
+          {
+            "行业": "赛马概念"
+          },
+          {
+            "行业": "福建自贸区"
+          }
+        ]
+      },
+      "elapsed_seconds": 2.602,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "path": "/funds/gnzjl/field/tradezdf/order/desc/ajax/1/free/1/",
+          "status": 200,
+          "elapsed_seconds": 1.229,
+          "headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 19:44:14 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc5.10jqka.com.cn",
+            "via": "1.1 cachewc5.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cSsSfU])"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "path": "/funds/gnzjl/field/tradezdf/order/desc/page/1/ajax/1/free/1/",
+          "status": 200,
+          "elapsed_seconds": 1.099,
+          "headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 19:44:00 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc61.10jqka.com.cn",
+            "via": "1.1 cachewc61.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cHs f ])",
+            "content-length": "4473"
+          }
+        }
+      ],
+      "unit_evidence": "raw column labels: flow in/out/net = 亿; current price = 元"
+    },
+    {
+      "id": "individual_fund_000001",
+      "fn": "stock_individual_fund_flow",
+      "kwargs": {
+        "stock": "000001",
+        "market": "sz"
+      },
+      "host": "push2his.eastmoney.com",
+      "budget": 1,
+      "status": "success",
+      "rows": 120,
+      "columns": [
+        "日期",
+        "收盘价",
+        "涨跌幅",
+        "主力净流入-净额",
+        "主力净流入-净占比",
+        "超大单净流入-净额",
+        "超大单净流入-净占比",
+        "大单净流入-净额",
+        "大单净流入-净占比",
+        "中单净流入-净额",
+        "中单净流入-净占比",
+        "小单净流入-净额",
+        "小单净流入-净占比"
+      ],
+      "missing": {
+        "日期": 0,
+        "收盘价": 0,
+        "涨跌幅": 0,
+        "主力净流入-净额": 0,
+        "主力净流入-净占比": 0,
+        "超大单净流入-净额": 0,
+        "超大单净流入-净占比": 0,
+        "大单净流入-净额": 0,
+        "大单净流入-净占比": 0,
+        "中单净流入-净额": 0,
+        "中单净流入-净占比": 0,
+        "小单净流入-净额": 0,
+        "小单净流入-净占比": 0
+      },
+      "date_column": "日期",
+      "date_min": "2026-04-03",
+      "date_max": "2026-09-24",
+      "contains_target_date": true,
+      "sample_identity": [],
+      "elapsed_seconds": 1.425,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "push2his.eastmoney.com",
+          "path": "/api/qt/stock/fflow/daykline/get",
+          "status": 200,
+          "elapsed_seconds": 1.355,
+          "headers": {
+            "server": "envoy",
+            "date": "Sun, 27 Sep 2026 19:44:17 GMT",
+            "content-type": "application/json; charset=UTF-8",
+            "content-length": "5648"
+          }
+        }
+      ],
+      "unit_evidence": "amount columns have no unit suffix in AKShare output; unit remains unverified"
+    },
+    {
+      "id": "notice_risk_20260924",
+      "fn": "stock_notice_report",
+      "kwargs": {
+        "symbol": "风险提示",
+        "date": "20260924"
+      },
+      "host": "np-anotice-stock.eastmoney.com",
+      "budget": 2,
+      "status": "success",
+      "rows": 32,
+      "columns": [
+        "代码",
+        "名称",
+        "公告标题",
+        "公告类型",
+        "公告日期",
+        "网址"
+      ],
+      "missing": {
+        "代码": 0,
+        "名称": 0,
+        "公告标题": 0,
+        "公告类型": 0,
+        "公告日期": 0,
+        "网址": 0
+      },
+      "date_column": "公告日期",
+      "date_min": "2026-09-24",
+      "date_max": "2026-09-24",
+      "contains_target_date": true,
+      "sample_identity": [
+        {
+          "代码": "001216",
+          "名称": "华瓷股份",
+          "公告标题": "华瓷股份:关于股票交易异常波动的公告"
+        },
+        {
+          "代码": "002205",
+          "名称": "国统股份",
+          "公告标题": "国统股份:新疆国统管道股份有限公司关于股票交易异常波动的公告"
+        },
+        {
+          "代码": "301689",
+          "名称": "电科思仪",
+          "公告标题": "电科思仪:股票交易异常波动公告"
+        }
+      ],
+      "elapsed_seconds": 2.137,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "np-anotice-stock.eastmoney.com",
+          "path": "/api/security/ann",
+          "status": 200,
+          "elapsed_seconds": 1.002,
+          "headers": {
+            "server": "envoy",
+            "content-type": "text/plain;charset=UTF-8",
+            "content-length": "22446",
+            "date": "Sun, 27 Sep 2026 19:44:18 GMT"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "np-anotice-stock.eastmoney.com",
+          "path": "/api/security/ann",
+          "status": 200,
+          "elapsed_seconds": 1.034,
+          "headers": {
+            "server": "envoy",
+            "content-type": "text/plain;charset=UTF-8",
+            "content-length": "22446",
+            "date": "Sun, 27 Sep 2026 19:44:19 GMT"
+          }
+        }
+      ],
+      "unit_evidence": "not applicable to numeric market units"
+    },
+    {
+      "id": "news_000001",
+      "fn": "stock_news_em",
+      "kwargs": {
+        "symbol": "000001"
+      },
+      "host": "search-api-web.eastmoney.com",
+      "budget": 1,
+      "status": "success",
+      "rows": 10,
+      "columns": [
+        "关键词",
+        "新闻标题",
+        "新闻内容",
+        "发布时间",
+        "文章来源",
+        "新闻链接"
+      ],
+      "missing": {
+        "关键词": 0,
+        "新闻标题": 0,
+        "新闻内容": 0,
+        "发布时间": 0,
+        "文章来源": 0,
+        "新闻链接": 0
+      },
+      "date_column": "发布时间",
+      "date_min": "2026-08-15 09:44:11",
+      "date_max": "2026-09-24 17:04:00",
+      "contains_target_date": true,
+      "sample_identity": [
+        {
+          "新闻标题": "平安银行000001.SZ)2026年中报净利润为256.96亿元、较去年同期上涨3.32%"
+        },
+        {
+          "新闻标题": "平安银行000001.SZ)：2026年中报净利润为256.96亿元"
+        },
+        {
+          "新闻标题": "红利低波（H30269.CSI）指数多只成分股9月23日进行股权登记"
+        }
+      ],
+      "elapsed_seconds": 0.924,
+      "http_calls": [],
+      "unit_evidence": "not applicable to numeric market units",
+      "http_count_observation": "instrumentation did not intercept curl_cffi request in this run; exact actual count is not claimed"
+    },
+    {
+      "id": "industry_bank_members",
+      "fn": "stock_board_industry_cons_em",
+      "kwargs": {
+        "symbol": "银行"
+      },
+      "host": "17.push2.eastmoney.com",
+      "budget": 2,
+      "status": "skipped_dependency",
+      "reason": "industry/concept key lists were not both successful; downstream scan stopped",
+      "unit_evidence": "not tested because dependency was skipped"
+    },
+    {
+      "id": "concept_ai_members",
+      "fn": "stock_board_concept_cons_em",
+      "kwargs": {
+        "symbol": "人工智能"
+      },
+      "host": "17.push2.eastmoney.com",
+      "budget": 2,
+      "status": "skipped_dependency",
+      "reason": "industry/concept key lists were not both successful; downstream scan stopped",
+      "unit_evidence": "not tested because dependency was skipped"
+    },
+    {
+      "id": "industry_bank_history",
+      "fn": "stock_board_industry_hist_em",
+      "kwargs": {
+        "symbol": "银行",
+        "start_date": "20260601",
+        "end_date": "20260924",
+        "period": "日k",
+        "adjust": ""
+      },
+      "host": "17.push2.eastmoney.com",
+      "budget": 3,
+      "status": "skipped_dependency",
+      "reason": "industry/concept key lists were not both successful; downstream scan stopped",
+      "unit_evidence": "not tested because dependency was skipped"
+    },
+    {
+      "id": "concept_ai_history",
+      "fn": "stock_board_concept_hist_em",
+      "kwargs": {
+        "symbol": "人工智能",
+        "start_date": "20260601",
+        "end_date": "20260924",
+        "period": "daily",
+        "adjust": ""
+      },
+      "host": "17.push2.eastmoney.com",
+      "budget": 3,
+      "status": "skipped_dependency",
+      "reason": "industry/concept key lists were not both successful; downstream scan stopped",
+      "unit_evidence": "not tested because dependency was skipped"
+    }
+  ]
+}

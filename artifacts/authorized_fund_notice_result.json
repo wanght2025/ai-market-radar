@@ -1,0 +1,466 @@
+{
+  "purpose": "allowlist-constrained one-invocation fund and notice verification; not an investment conclusion",
+  "started_at_beijing": "2026-09-27T22:22:27.065140+08:00",
+  "finished_at_beijing": "2026-09-27T22:22:53.223495+08:00",
+  "environment": {
+    "python": "3.14.4",
+    "akshare": "1.18.97",
+    "requests": "2.34.2"
+  },
+  "authorization_confirmation": {
+    "data.10jqka.com.cn": {
+      "methods": [
+        "GET",
+        "HEAD",
+        "OPTIONS"
+      ],
+      "newly_allowed_by_user": true,
+      "methods_used": [
+        "GET"
+      ]
+    },
+    "np-anotice-stock.eastmoney.com": {
+      "previously_exercised_eastmoney_path": true,
+      "methods_used": [
+        "GET"
+      ]
+    }
+  },
+  "constraints": {
+    "one_akshare_invocation_per_task": true,
+    "per_request_timeout_seconds": 10.0,
+    "no_retry": true,
+    "no_unlisted_host": true
+  },
+  "results": [
+    {
+      "id": "ths_industry_fund",
+      "fn": "stock_fund_flow_industry",
+      "kwargs": {
+        "symbol": "即时"
+      },
+      "allowed_host": "data.10jqka.com.cn",
+      "request_budget": 2,
+      "status": "partial_request_budget",
+      "error_type": "RequestBudgetExceeded",
+      "error": "underlying GET budget 2 exhausted",
+      "first_page_table": {
+        "parse_status": "success",
+        "rows": 20,
+        "columns": [
+          "序号",
+          "行业",
+          "行业指数",
+          "涨跌幅",
+          "流入资金(亿)",
+          "流出资金(亿)",
+          "净额(亿)",
+          "公司家数",
+          "领涨股",
+          "涨跌幅.1",
+          "当前价(元)"
+        ],
+        "missing_by_column": {
+          "序号": 0,
+          "行业": 0,
+          "行业指数": 0,
+          "涨跌幅": 0,
+          "流入资金(亿)": 0,
+          "流出资金(亿)": 0,
+          "净额(亿)": 0,
+          "公司家数": 0,
+          "领涨股": 0,
+          "涨跌幅.1": 0,
+          "当前价(元)": 0
+        },
+        "sample_identity": [
+          {
+            "行业": "风电设备"
+          },
+          {
+            "行业": "纺织制造"
+          },
+          {
+            "行业": "教育"
+          }
+        ],
+        "unit_evidence_from_values": {
+          "流入资金(亿)": {
+            "examples": [
+              "45.43",
+              "9.72",
+              "10.9"
+            ],
+            "embedded_suffixes": []
+          },
+          "流出资金(亿)": {
+            "examples": [
+              "38.37",
+              "10.9",
+              "10.42"
+            ],
+            "embedded_suffixes": []
+          },
+          "净额(亿)": {
+            "examples": [
+              "7.06",
+              "-1.18",
+              "0.48"
+            ],
+            "embedded_suffixes": []
+          }
+        },
+        "units_from_column_labels": {
+          "流入资金(亿)": "亿",
+          "流出资金(亿)": "亿",
+          "净额(亿)": "亿",
+          "当前价(元)": "元"
+        }
+      },
+      "elapsed_seconds": 4.844,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "url_path": "/funds/hyzjl/field/tradezdf/order/desc/ajax/1/free/1/",
+          "http_status": 200,
+          "elapsed_seconds": 3.291,
+          "public_response_headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 14:22:00 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc78.10jqka.com.cn",
+            "via": "1.1 cachewc78.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cRs f ])",
+            "content-length": "4467"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "url_path": "/funds/hyzjl/field/tradezdf/order/desc/page/1/ajax/1/free/1/",
+          "http_status": 200,
+          "elapsed_seconds": 1.24,
+          "public_response_headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 14:22:32 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc2.10jqka.com.cn",
+            "via": "1.1 cachewc2.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cSsSfU])"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ths_concept_fund",
+      "fn": "stock_fund_flow_concept",
+      "kwargs": {
+        "symbol": "即时"
+      },
+      "allowed_host": "data.10jqka.com.cn",
+      "request_budget": 2,
+      "status": "partial_request_budget",
+      "error_type": "RequestBudgetExceeded",
+      "error": "underlying GET budget 2 exhausted",
+      "first_page_table": {
+        "parse_status": "success",
+        "rows": 20,
+        "columns": [
+          "序号",
+          "行业",
+          "行业指数",
+          "涨跌幅",
+          "流入资金(亿)",
+          "流出资金(亿)",
+          "净额(亿)",
+          "公司家数",
+          "领涨股",
+          "涨跌幅.1",
+          "当前价(元)"
+        ],
+        "missing_by_column": {
+          "序号": 0,
+          "行业": 0,
+          "行业指数": 0,
+          "涨跌幅": 0,
+          "流入资金(亿)": 0,
+          "流出资金(亿)": 0,
+          "净额(亿)": 0,
+          "公司家数": 0,
+          "领涨股": 0,
+          "涨跌幅.1": 0,
+          "当前价(元)": 0
+        },
+        "sample_identity": [
+          {
+            "行业": "中船系"
+          },
+          {
+            "行业": "赛马概念"
+          },
+          {
+            "行业": "福建自贸区"
+          }
+        ],
+        "unit_evidence_from_values": {
+          "流入资金(亿)": {
+            "examples": [
+              "18.15",
+              "3.39",
+              "143.16"
+            ],
+            "embedded_suffixes": []
+          },
+          "流出资金(亿)": {
+            "examples": [
+              "21.16",
+              "2.79",
+              "170.45"
+            ],
+            "embedded_suffixes": []
+          },
+          "净额(亿)": {
+            "examples": [
+              "-3.01",
+              "0.61",
+              "-27.28"
+            ],
+            "embedded_suffixes": []
+          }
+        },
+        "units_from_column_labels": {
+          "流入资金(亿)": "亿",
+          "流出资金(亿)": "亿",
+          "净额(亿)": "亿",
+          "当前价(元)": "元"
+        }
+      },
+      "elapsed_seconds": 7.462,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "url_path": "/funds/gnzjl/field/tradezdf/order/desc/ajax/1/free/1/",
+          "http_status": 200,
+          "elapsed_seconds": 5.328,
+          "public_response_headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 14:22:38 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachemd204196.10jqka.com.cn",
+            "via": "1.1 cachemd204196.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cSsSfU])"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "url_path": "/funds/gnzjl/field/tradezdf/order/desc/page/1/ajax/1/free/1/",
+          "http_status": 200,
+          "elapsed_seconds": 1.853,
+          "public_response_headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 14:22:40 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachemd215128.10jqka.com.cn",
+            "via": "1.1 cachemd215128.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cSsSfU])"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ths_individual_fund",
+      "fn": "stock_fund_flow_individual",
+      "kwargs": {
+        "symbol": "即时"
+      },
+      "allowed_host": "data.10jqka.com.cn",
+      "request_budget": 2,
+      "status": "partial_request_budget",
+      "error_type": "RequestBudgetExceeded",
+      "error": "underlying GET budget 2 exhausted",
+      "first_page_table": {
+        "parse_status": "success",
+        "rows": 20,
+        "columns": [
+          "序号",
+          "股票代码",
+          "股票简称",
+          "最新价",
+          "涨跌幅",
+          "换手率",
+          "流入资金(元)",
+          "流出资金(元)",
+          "净额(元)",
+          "成交额(元)"
+        ],
+        "missing_by_column": {
+          "序号": 0,
+          "股票代码": 0,
+          "股票简称": 0,
+          "最新价": 0,
+          "涨跌幅": 0,
+          "换手率": 0,
+          "流入资金(元)": 0,
+          "流出资金(元)": 0,
+          "净额(元)": 0,
+          "成交额(元)": 0
+        },
+        "sample_identity": [
+          {
+            "股票代码": "689009",
+            "股票简称": "九号公司"
+          },
+          {
+            "股票代码": "688981",
+            "股票简称": "中芯国际"
+          },
+          {
+            "股票代码": "688837",
+            "股票简称": "信诺维"
+          }
+        ],
+        "unit_evidence_from_values": {
+          "流入资金(元)": {
+            "examples": [
+              "8355.61万",
+              "10.57亿",
+              "4.54亿"
+            ],
+            "embedded_suffixes": [
+              "万",
+              "亿"
+            ]
+          },
+          "流出资金(元)": {
+            "examples": [
+              "1.15亿",
+              "11.90亿",
+              "5.67亿"
+            ],
+            "embedded_suffixes": [
+              "亿"
+            ]
+          },
+          "净额(元)": {
+            "examples": [
+              "-3134.55万",
+              "-1.33亿",
+              "-1.13亿"
+            ],
+            "embedded_suffixes": [
+              "万",
+              "亿"
+            ]
+          },
+          "成交额(元)": {
+            "examples": [
+              "1.98亿",
+              "22.46亿",
+              "10.21亿"
+            ],
+            "embedded_suffixes": [
+              "亿"
+            ]
+          }
+        },
+        "units_from_column_labels": {
+          "流入资金(元)": "元",
+          "流出资金(元)": "元",
+          "净额(元)": "元",
+          "成交额(元)": "元"
+        }
+      },
+      "elapsed_seconds": 2.632,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "url_path": "/funds/ggzjl/field/code/order/desc/ajax/1/free/1/",
+          "http_status": 200,
+          "elapsed_seconds": 1.161,
+          "public_response_headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 14:21:48 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc2.10jqka.com.cn",
+            "via": "1.1 cachewc2.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cHs f ])",
+            "content-length": "4087"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "data.10jqka.com.cn",
+          "url_path": "/funds/ggzjl/field/zdf/order/desc/page/1/ajax/1/free/1/",
+          "http_status": 200,
+          "elapsed_seconds": 1.192,
+          "public_response_headers": {
+            "content-type": "text/html; charset=gbk",
+            "date": "Sun, 27 Sep 2026 14:21:48 GMT",
+            "server": "envoy",
+            "x-cache": "MISS from cachewc207.10jqka.com.cn",
+            "via": "1.1 cachewc207.10jqka.com.cn (squid), http/1.1 cachehuzdx184-195.10jqka.com.cn (ApacheTrafficServer/10.0.3 [cHs f ])",
+            "content-length": "4100"
+          }
+        }
+      ]
+    },
+    {
+      "id": "eastmoney_notice_20260924",
+      "fn": "stock_notice_report",
+      "kwargs": {
+        "symbol": "全部",
+        "date": "20260924"
+      },
+      "allowed_host": "np-anotice-stock.eastmoney.com",
+      "request_budget": 3,
+      "status": "partial_request_budget",
+      "error_type": "RequestBudgetExceeded",
+      "error": "underlying GET budget 3 exhausted",
+      "first_page_table": {
+        "parse_status": "failed",
+        "error": "ValueError: No tables found"
+      },
+      "elapsed_seconds": 9.649,
+      "http_calls": [
+        {
+          "method": "GET",
+          "host": "np-anotice-stock.eastmoney.com",
+          "url_path": "/api/security/ann",
+          "http_status": 200,
+          "elapsed_seconds": 2.883,
+          "public_response_headers": {
+            "server": "envoy",
+            "content-type": "text/plain;charset=UTF-8",
+            "content-length": "69129",
+            "date": "Sun, 27 Sep 2026 14:22:44 GMT"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "np-anotice-stock.eastmoney.com",
+          "url_path": "/api/security/ann",
+          "http_status": 200,
+          "elapsed_seconds": 2.601,
+          "public_response_headers": {
+            "server": "envoy",
+            "content-type": "text/plain;charset=UTF-8",
+            "content-length": "69129",
+            "date": "Sun, 27 Sep 2026 14:22:48 GMT"
+          }
+        },
+        {
+          "method": "GET",
+          "host": "np-anotice-stock.eastmoney.com",
+          "url_path": "/api/security/ann",
+          "http_status": 200,
+          "elapsed_seconds": 4.053,
+          "public_response_headers": {
+            "server": "envoy",
+            "content-type": "text/plain;charset=UTF-8",
+            "content-length": "69968",
+            "date": "Sun, 27 Sep 2026 14:22:50 GMT"
+          }
+        }
+      ]
+    }
+  ]
+}
