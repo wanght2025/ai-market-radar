@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+data/
+reports/
+backups/
+.env
+config.json
+sync_baseline.json
+artifacts/

@@ -1,0 +1,115 @@
+{
+  "baseline_commit": "6394ae8",
+  "baseline_tag": "baseline/engineering-rc6",
+  "policy": "Original documents remain byte-identical. Relative links refer to repository root at their original version. Historical local artifacts are preserved separately in artifacts/engineering-cleanup/historical-test-material.zip.",
+  "entries": [
+    {
+      "original_path": "AI_任务与提示词.md",
+      "archive_path": "docs/archive/AI_任务与提示词.md",
+      "sha256": "de33ce5ed6c2f82e4e14b30eb2d789cffc632add7a929ff06c75fe7162f93ddf",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "AI市场雷达_产品思路_V2.md",
+      "archive_path": "docs/archive/AI市场雷达_产品思路_V2.md",
+      "sha256": "798cee1be383a03a1be34f00438039960bc792cd1a873e7ef0c53458807cf1a6",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "design-system/market-radar/MASTER.md",
+      "archive_path": "docs/archive/MASTER.md",
+      "sha256": "679e6373fd5a6d6178220a0277b98f0d317d224b6ebb4049ea3e9147def29afd",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "UI_图示与AI验收_20261004.md",
+      "archive_path": "docs/archive/UI_图示与AI验收_20261004.md",
+      "sha256": "9598236c20efcea5dc5100a64e5b36f9b05eecf49757208129850e79fd5be5c8",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "UI_明确判断验收_20261004.md",
+      "archive_path": "docs/archive/UI_明确判断验收_20261004.md",
+      "sha256": "e52f367e0f347840dcb80a1c9b9626679089989aaa86dd7295f26a86f6e8f282",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "UI_机会雷达验收_20261004.md",
+      "archive_path": "docs/archive/UI_机会雷达验收_20261004.md",
+      "sha256": "7977ba2ab2f0360ed9c124db0b1cdd67fd26a9821dcc084b02b831a380dbbbb1",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "UI_验收记录_20261004.md",
+      "archive_path": "docs/archive/UI_验收记录_20261004.md",
+      "sha256": "ec6ff936d33232e2f5cae63cb5f76511d9e15aaefc673a4f14931ded32565d11",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "V1上市前待办_20261007.md",
+      "archive_path": "docs/archive/V1上市前待办_20261007.md",
+      "sha256": "9a730eaacafd40a169a62ddd1a025dd3c3c9d21ef0d3d2e8cec8e4018d48f8f6",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "上市前产品评价与改良方案_20261004.md",
+      "archive_path": "docs/archive/上市前产品评价与改良方案_20261004.md",
+      "sha256": "502df892d8e667e69b1e7d9d9d4aeed5d627bcc0831cc402444328d71e36bc53",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "五档仪表与市场预测实施记录.md",
+      "archive_path": "docs/archive/五档仪表与市场预测实施记录.md",
+      "sha256": "cceaa01cace19f899e61da97402c6e51a7d120100c1636b5003cc6a4681e1b2e",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "交付记录_20261006.md",
+      "archive_path": "docs/archive/交付记录_20261006.md",
+      "sha256": "b3b5945ad1672615721a2e029a1d0494d2cfd02e25b81cdbb97a49169923bac5",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "产品体验改善实施记录_20261006.md",
+      "archive_path": "docs/archive/产品体验改善实施记录_20261006.md",
+      "sha256": "e6e96787825636221d20f1e3034694c774a7d802c1aa6d590f8cd56271faeaa7",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "产品体验改善报告_20261006.md",
+      "archive_path": "docs/archive/产品体验改善报告_20261006.md",
+      "sha256": "8abb50a2eeb9fb39654b57db353fea998b40aae8068d54f43f2c8204cd93158d",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "市场雷达_机会雷达整合实施方案.md",
+      "archive_path": "docs/archive/市场雷达_机会雷达整合实施方案.md",
+      "sha256": "4bf6c6c29c79ef41b8ed8f8afc791286b5ef844a3428fcbb583ce40c00b44f27",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "评分规则核查与本轮交付_20261006.md",
+      "archive_path": "docs/archive/评分规则核查与本轮交付_20261006.md",
+      "sha256": "b4f77fad16ec7b482dfd83b41c07abe7adb6ee4b70c14a456f6a9ead5a5e1d84",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "重点展示与数据缺口整改说明.md",
+      "archive_path": "docs/archive/重点展示与数据缺口整改说明.md",
+      "sha256": "c01343b2fc7f515d35a7d56af7e81c141ccaaca32124e1eb57b372609442f6ae",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "首页判断修订_20261006.md",
+      "archive_path": "docs/archive/首页判断修订_20261006.md",
+      "sha256": "bbaafe8d995281ad4d0dd6791747cc23d7c3c75d5669af00b5279825030b175a",
+      "reason": "含审计复现、验收或算法演进证据；当前有效内容合入核心规则与结构文档"
+    },
+    {
+      "original_path": "VALIDATION.md",
+      "archive_path": "docs/archive/validation-history.md",
+      "sha256": "c034a252181566809a996fdebc2f798a6361ce3825c2835c52903ab4504639f8",
+      "reason": "旧版逐日核验原文；当前验收规范改为核心VALIDATION.md"
+    }
+  ]
+}

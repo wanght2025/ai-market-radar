@@ -1,0 +1,2 @@
+# Preserve archived evidence bytes across Windows checkouts.
+docs/archive/* -text whitespace=cr-at-eol

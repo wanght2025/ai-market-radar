@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const vm=require('node:vm');
+const source=fs.readFileSync('dashboard-research.js','utf8');
+const presentation=vm.runInNewContext(source+'; forecastLabel',{esc:String});
+assert.equal(presentation({status:'PRE_MARKET',prediction_date:'2026-10-09'}),'今日盘前预测 · 2026-10-09');
+assert.equal(presentation({status:'POST_MARKET_FALLBACK',prediction_date:'2026-10-09'}),'沿用盘后预测 · 2026-10-09');
+assert.equal(presentation({status:'NEXT_SESSION',prediction_date:'2026-10-09'}),'下一交易日预测 · 2026-10-09');
+assert.equal(presentation({status:'RECENT_RESEARCH',prediction_date:'2026-10-09'}),'最近研究 · 2026-10-09 暂无正式预测');
+assert.equal(presentation({status:'RECENT_RESEARCH',prediction_date:null}),'最近研究 · 交易日历尚未核验');
+console.log('Forward status presentation passed');
